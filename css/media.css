@@ -1,0 +1,27 @@
+@media screen and (max-width: 1290px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .logo-img {
+    width: 66px;
+  }
+
+  .nav__link-social {
+    display: none;
+  }
+
+  .nav-phone {
+    right: 64px;
+  }
+
+  .nav__burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .nav-phone {
+    right: 38px;
+  }
+}
