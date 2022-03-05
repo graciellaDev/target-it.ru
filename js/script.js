@@ -2,12 +2,13 @@ let buttonCall = document.querySelector('.nav__btn-to-form'),
     body = document.querySelector('body'),
     modalForm = document.querySelector('.modal-order-phone')
     form = document.querySelector('.order-form'),
-    closeForm = document.querySelector('.order-form__close')
+    closeForm = document.querySelector('.order-form__close'),
+    keyUp = -1
 
 buttonCall.addEventListener('click', () => {
   modalForm.classList.toggle('modal-order-phone_visible')
   form.classList.add('move-down')
-  setTimeout(function() {
+  let keyDown = setTimeout(function() {
     form.style.top = '0'
   }, 300)
   body.classList.add('hidden')
@@ -15,8 +16,8 @@ buttonCall.addEventListener('click', () => {
 
 modalForm.addEventListener('click', function(event) {
   let elTarget = event.target.classList
-  if(elTarget.contains('modal-order-phone')){
-    elTarget.toggle('modal-order-phone_visible')
+  if(elTarget.contains('modal-order-phone') && !form.classList.contains('move-up')){
+    closeModalForm()
   }
 
 })
@@ -24,7 +25,7 @@ modalForm.addEventListener('click', function(event) {
 // closing modal form
 function closeModalForm() {
   form.classList.toggle('move-up')
-  setTimeout(function() {
+  keyUp = setTimeout(function() {
     modalForm.classList.toggle('modal-order-phone_visible')
     form.style.top = '-100%'
     form.classList.toggle('move-down')
