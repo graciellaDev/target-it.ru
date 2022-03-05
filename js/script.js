@@ -21,13 +21,15 @@ modalForm.addEventListener('click', function(event) {
 
 })
 
-closeForm.addEventListener('click', () => {
-
+// closing modal form
+function closeModalForm() {
   form.classList.toggle('move-up')
   setTimeout(function() {
     modalForm.classList.toggle('modal-order-phone_visible')
     form.style.top = '-100%'
     form.classList.toggle('move-down')
     form.classList.toggle('move-up')
-  }, 300)
-})
+  }, 1000)
+}
+
+closeForm.addEventListener('click', closeModalForm)
