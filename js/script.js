@@ -58,7 +58,7 @@ let mobBody = document.querySelector('.nav__link-social'),
     distanceY = 0,
     moveY = false
 
-// mobile swipe-menu
+
 function closeMobMenu() {
   mobBody.classList.add('nav__link-social_mob-up')
     setTimeout(() => {
@@ -68,6 +68,7 @@ function closeMobMenu() {
     }, 1000);
 }
 
+// mobile swipe-menu
 mobBody.addEventListener('touchstart', function(e) {
   startY = e.touches[0].clientY;
 })
@@ -83,7 +84,9 @@ mobBody.addEventListener('touchend', function(e) {
   if(moveY && distanceY < 0) {
     closeMobMenu()
     startY = 0
+    distanceY = 0
     moveY = true
+
   }
 })
 
@@ -96,9 +99,24 @@ body.addEventListener('click', (e) => {
   if(thisTarget.classList.contains('nav')) {
     closeMobMenu()
   }
+})
 
+let menu = document.querySelector('.nav__link-social')
+
+menu.addEventListener('click', (e) => {
+  elClick = e.target
   let userWidth = document.documentElement.clientWidth
   if(userWidth <= 1290 ) {
-   // alert(thisTarget.tagName)
+    let arrayMenuLink = document.querySelectorAll('.nav-link'),
+        buttonOrder = document.querySelector('.nav__btn-to-form'),
+        mobLinkSocial = document.querySelectorAll('.mob-social__item > a')
+
+    arrayMenuLink.forEach((e) => {
+      e.addEventListener('click', closeMobMenu)
+    })
+    buttonOrder.addEventListener('click', closeMobMenu)
+    mobLinkSocial.forEach((e) => {
+      e.addEventListener('click', closeMobMenu)
+    })
   }
 })
