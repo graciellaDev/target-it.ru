@@ -99,6 +99,6 @@ body.addEventListener('click', (e) => {
 
   let userWidth = document.documentElement.clientWidth
   if(userWidth <= 1290 ) {
-    alert(thisTarget.tagName)
+   // alert(thisTarget.tagName)
   }
 })
