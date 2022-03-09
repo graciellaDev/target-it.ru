@@ -1,5 +1,6 @@
 :root {
   --yellow: #ffdf68;
+  --link-yellow: #FCD600;
   --grey: #727272;
   --light-violet: #c2a7e4;
   --violet: #8333e9;
@@ -224,6 +225,26 @@ body {
   width: 202px;
 }
 
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -37px;
+  left: -22px;
+  width: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color .3s linear, width .3s linear;
+}
+
+.nav-link:hover::before {
+  width: calc(100% + 44px);
+  background-color: var(--link-yellow);
+}
+
 .nav__link-social {
    -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -289,6 +310,23 @@ body {
   display: flex;
   align-items: center;
 }
+
+.nav-phone__icon-svg ellipse {
+  transition: fill .3s linear;
+}
+
+.nav-phone:hover .nav-phone__icon-svg ellipse {
+  fill: #19FE82;
+}
+
+.nav-phone:focus .nav-phone__icon-svg ellipse {
+  fill: #45FC99;
+}
+
+.nav-phone:active .nav-phone__icon-svg ellipse {
+  fill: #5BFBA5;
+}
+
 
 .nav-phone__icon-svg {
   margin-right: 11px;
