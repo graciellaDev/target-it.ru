@@ -7,7 +7,7 @@ let buttonCall = document.querySelector('.nav__btn-to-form'),
 
 // open modal order
 buttonCall.addEventListener('click', () => {
-  modalForm.classList.toggle('modal-order-phone_visible')
+  modalForm.classList.toggle('visible')
   form.classList.add('move-down')
   setTimeout(function() {
     form.style.top = '0'
@@ -27,7 +27,7 @@ modalForm.addEventListener('click', function(event) {
 function closeModalForm() {
   form.classList.toggle('move-up')
   keyUp = setTimeout(function() {
-    modalForm.classList.toggle('modal-order-phone_visible')
+    modalForm.classList.toggle('visible')
     form.style.top = '-100%'
     form.classList.toggle('move-down')
     form.classList.toggle('move-up')
@@ -37,12 +37,24 @@ function closeModalForm() {
 
 closeForm.addEventListener('click', closeModalForm)
 
+//create overlay
+function createOverlay(el) {
+  let overlay = document.createElement('div')
+  overlay.classList.add('overlay')
+  el.append(overlay)
+  return overlay
+}
+
+
 //open mobile menu
 let burger = document.querySelector('.nav__burger'),
-    mobMenu = document.querySelector('.nav__link-social')
+    mobMenu = document.querySelector('.nav__link-social'),
+    nav = document.querySelector('.nav')
 
 burger.addEventListener('click', () => {
-  body.classList.add('hidden-mob')
+  body.classList.add('hidden')
+  let overlay = createOverlay(nav)
+  overlay.classList.add('visible')
   setTimeout(function() {
     mobMenu.classList.add('nav__link-social_mob-down')
     setTimeout(() => {
@@ -60,11 +72,16 @@ let mobBody = document.querySelector('.nav__link-social'),
 
 
 function closeMobMenu() {
+  let overlay = document.querySelector('.overlay')
   mobBody.classList.add('nav__link-social_mob-up')
     setTimeout(() => {
       mobMenu.classList.remove('bottom')
       mobMenu.classList.remove('nav__link-social_mob-up')
-      body.classList.remove('hidden-mob')
+      overlay.classList.remove('visible')
+      setTimeout(() => {
+        overlay.remove()
+        body.classList.remove('hidden')
+      }, 300)
     }, 1000);
 }
 
@@ -86,7 +103,6 @@ mobBody.addEventListener('touchend', function(e) {
     startY = 0
     distanceY = 0
     moveY = true
-
   }
 })
 
@@ -95,8 +111,7 @@ mobBody.addEventListener('touchend', function(e) {
 body.addEventListener('click', (e) => {
   let thisTarget = e.target
 
-
-  if(thisTarget.classList.contains('nav')) {
+  if(thisTarget.classList.contains('overlay')) {
     closeMobMenu()
   }
 })
@@ -119,4 +134,12 @@ menu.addEventListener('click', (e) => {
       e.addEventListener('click', closeMobMenu)
     })
   }
+})
+
+// open modal advice
+let buttonOpenAdvice = document.querySelector('.button-more'),
+    modalAdvice = document.querySelector('.modal-advice')
+
+buttonOpenAdvice.addEventListener('click', () => {
+
 })

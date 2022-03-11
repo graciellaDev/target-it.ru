@@ -184,11 +184,6 @@ body {
   overflow: hidden;
 }
 
-.hidden-mob {
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, .75);
-}
-
 @-webkit-keyframes down {
   from {
     top: -100%;
@@ -245,6 +240,20 @@ body {
   top: 0;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s linear;
+       -o-transition: all .3s linear;
+          transition: all .3s linear;
+}
+
  /* header */
  .header {
    position: fixed;
@@ -282,7 +291,9 @@ body {
   width: 0;
   height: 3px;
   background-color: transparent;
-  transition: background-color .3s linear, width .3s linear;
+  -webkit-transition: background-color .3s linear, width .3s linear;
+       -o-transition: background-color .3s linear, width .3s linear;
+          transition: background-color .3s linear, width .3s linear;
 }
 
 .nav-link:hover::before {
@@ -405,7 +416,7 @@ body {
           transition: all .3s linear;
 }
 
-.modal-order-phone_visible {
+.visible {
   background-color: rgba(0, 0, 0, .75);
   opacity: 1;
   visibility: visible;
@@ -742,4 +753,8 @@ body {
   -webkit-box-direction: normal;
      -ms-flex-direction: column;
          flex-direction: column;
+}
+
+.modal-advice {
+  display: none;
 }
