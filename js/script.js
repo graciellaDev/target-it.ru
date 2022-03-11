@@ -1,33 +1,42 @@
 let buttonCall = document.querySelector('.nav__btn-to-form'),
     body = document.querySelector('body'),
-    modalForm = document.querySelector('.modal-order-phone')
-    form = document.querySelector('.order-form'),
-    closeForm = document.querySelector('.order-form__close'),
+    modalFormCall = document.querySelector('.modal-order-phone'),
+    formOrder = document.querySelector('#order-form'),
+    closeOrderForm = document.querySelector('#close-order'),
     keyUp = -1
 
-// open modal order
-buttonCall.addEventListener('click', () => {
-  modalForm.classList.toggle('visible')
+//function open modal form
+function openModalForm(wrapper, form) {
+  wrapper.classList.toggle('visible')
   form.classList.add('move-down')
   setTimeout(function() {
     form.style.top = '0'
   }, 300)
   body.classList.add('hidden')
+}
+
+// open modal order
+buttonCall.addEventListener('click', () => {
+  let mobMenu = document.querySelector('.nav__link-social')
+  if(mobMenu.classList.contains('bottom')) {
+    closeMobMenu()
+  }
+  openModalForm(modalFormCall, formOrder)
 })
 
-modalForm.addEventListener('click', function(event) {
+modalFormCall.addEventListener('click', function(event) {
   let elTarget = event.target.classList
-  if(elTarget.contains('modal-order-phone') && !form.classList.contains('move-up')){
-    closeModalForm()
-  }
-
+  // if(elTarget.contains('modal-order-phone') && !formOrder.classList.contains('move-up')){
+  //   closeModalForm()
+  // }
 })
 
 // closing modal form
-function closeModalForm() {
+function closeModalForm(form, wrapperForm) {
+
   form.classList.toggle('move-up')
   keyUp = setTimeout(function() {
-    modalForm.classList.toggle('visible')
+    wrapperForm.classList.toggle('visible')
     form.style.top = '-100%'
     form.classList.toggle('move-down')
     form.classList.toggle('move-up')
@@ -35,7 +44,7 @@ function closeModalForm() {
   }, 1000)
 }
 
-closeForm.addEventListener('click', closeModalForm)
+closeOrderForm.addEventListener('click', () => closeModalForm(formOrder, modalFormCall))
 
 //create overlay
 function createOverlay(el) {
@@ -54,7 +63,9 @@ let burger = document.querySelector('.nav__burger'),
 burger.addEventListener('click', () => {
   body.classList.add('hidden')
   let overlay = createOverlay(nav)
-  overlay.classList.add('visible')
+  setTimeout(function() {
+    overlay.classList.add('visible')
+  }, 0)
   setTimeout(function() {
     mobMenu.classList.add('nav__link-social_mob-down')
     setTimeout(() => {
@@ -107,12 +118,16 @@ mobBody.addEventListener('touchend', function(e) {
 })
 
 //mob menu close by clicking on overlay
-//mobOverlay = document.querySelector('.hidden-mob')
 body.addEventListener('click', (e) => {
   let thisTarget = e.target
-
   if(thisTarget.classList.contains('overlay')) {
     closeMobMenu()
+  }
+  if(thisTarget.classList.contains('visible')) {
+    let visibleModal = document.querySelector('.visible'),
+        form = visibleModal.querySelector('form')
+
+    closeModalForm(form, visibleModal)
   }
 })
 
@@ -138,8 +153,13 @@ menu.addEventListener('click', (e) => {
 
 // open modal advice
 let buttonOpenAdvice = document.querySelector('.button-more'),
-    modalAdvice = document.querySelector('.modal-advice')
+    modalAdvice = document.querySelector('.modal-advice'),
+    formAdvice = document.querySelector('#form-advice'),
+    closeAdvice = document.querySelector('#close-advice')
 
 buttonOpenAdvice.addEventListener('click', () => {
-
+  openModalForm(modalAdvice, formAdvice)
 })
+
+// close modal advice
+closeAdvice.addEventListener('click', () => closeModalForm(formAdvice, modalAdvice))

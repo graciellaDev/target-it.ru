@@ -120,11 +120,6 @@
     display: block;
   }
 
-  /* hero */
-  .hero-col-right {
-    z-index: -1;
-  }
-
   /* modal order */
   .order-form {
     height: calc(100% - 80px);

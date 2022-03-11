@@ -401,7 +401,8 @@ body {
 }
 
 /* modal order */
-.modal-order-phone {
+.modal-order-phone,
+.modal-advice {
   position: fixed;
   top: 0;
   z-index: 1;
@@ -755,6 +756,3 @@ body {
          flex-direction: column;
 }
 
-.modal-advice {
-  display: none;
-}
