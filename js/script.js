@@ -163,3 +163,16 @@ buttonOpenAdvice.addEventListener('click', () => {
 
 // close modal advice
 closeAdvice.addEventListener('click', () => closeModalForm(formAdvice, modalAdvice))
+
+// open modal service
+let buttonOpenService = document.querySelector('.button-service'),
+    modalService = document.querySelector('.modal-service'),
+    formService = document.querySelector('#form-service'),
+    closeService = document.querySelector('#close-service')
+
+buttonOpenService.addEventListener('click', () => {
+  openModalForm(modalService, formService)
+})
+
+// close modal advice
+closeService.addEventListener('click', () => closeModalForm(formService, modalService))

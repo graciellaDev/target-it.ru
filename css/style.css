@@ -94,10 +94,16 @@ body {
   margin: 0;
   margin-bottom: 30px;
   font-weight: 900;
- /* font-size: calc(3vw + 6.4px);
- line-height: calc(4.2vw - 8px);*/
   font-size: calc(3.6vw - 4.6px);
   line-height: calc(3.6vw + 3.4px);
+}
+
+.second-title {
+  margin: 0;
+  margin-bottom: 31px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
 }
 
 .btn-reset {
@@ -120,7 +126,7 @@ body {
 }
 
 .section {
-  min-height: calc(100vh - 116px);
+  margin-bottom: 33px;
   font-size: 16px;
   line-height: 32px;
   color: black;
@@ -182,6 +188,11 @@ body {
 
 .hidden {
   overflow: hidden;
+}
+
+.line {
+  margin-bottom: 78px;
+  border-bottom: 1px solid #000;
 }
 
 @-webkit-keyframes down {
@@ -252,6 +263,24 @@ body {
   -webkit-transition: all .3s linear;
        -o-transition: all .3s linear;
           transition: all .3s linear;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.content-bottom-left {
+         -moz-animation: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  -webkit-box-pack: end;
+     -ms-flex-pack: end;
+   justify-content: end;
 }
 
  /* header */
@@ -402,7 +431,8 @@ body {
 
 /* modal order */
 .modal-order-phone,
-.modal-advice {
+.modal-advice,
+.modal-service {
   position: fixed;
   top: 0;
   z-index: 1;
@@ -658,8 +688,8 @@ body {
 
 /* hero */
 .hero {
-  height: 100vh;
-  padding: 116px 0 36px;
+  height: 100%;
+  padding: 125px 0 36px;
   background-image: url("../img/Bg-hero.png");
 }
 
@@ -756,3 +786,86 @@ body {
          flex-direction: column;
 }
 
+.button-more {
+  z-index: auto;
+}
+
+/* services */
+.services {
+  background-image: url("../img/Bg_sercies.png");
+}
+
+.swipe-wrapper {
+  margin-bottom: 79px;
+  overflow-x: hidden;
+}
+
+.swipe {
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+   overflow-x: auto;
+}
+
+.swipe:-webkit-scrollbar {
+  display: none;
+}
+
+.swipe__col {
+  min-width: 332px;
+  max-width: 332px;
+  min-height: 452px;
+  padding: 36px 26px 16px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+}
+
+.swipe__col:not(:last-child) {
+  margin-right: 32px;
+}
+
+.swipe__col_1 {
+  background-image: url("../img/Card_serv_analize.jpg");
+}
+
+.swipe__col_2 {
+  background-image: url("../img/promotion_concept.jpg");
+}
+
+.swipe__col_3 {
+  background-image: url("../img/Reclam_material.jpg");
+}
+
+.swipe__col_4 {
+  background-image: url("../img/Launch.jpg");
+}
+
+.swipe__col.center {
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+.card-title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.card-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.button-service {
+  margin: auto;
+  z-index: auto;
+}
+
+.modal-service {
+
+}
