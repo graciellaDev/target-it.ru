@@ -869,3 +869,23 @@ body {
 .modal-service {
 
 }
+
+/* additional */
+.additional {
+  background-image: url("../img/Bg_additional.png");
+}
+
+.additional__container {
+  -webkit-box-align: inherit;
+     -ms-flex-align: inherit;
+        align-items: inherit;
+}
+
+.additional__left {
+  background: url("../img/additional-left.png") no-repeat center bottom / contain;
+}
+
+.additional__img {
+  max-width: 1214px;
+  width: 100%;
+}

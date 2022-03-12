@@ -56,11 +56,7 @@ function createOverlay(el) {
 
 
 //open mobile menu
-let burger = document.querySelector('.nav__burger'),
-    mobMenu = document.querySelector('.nav__link-social'),
-    nav = document.querySelector('.nav')
-
-burger.addEventListener('click', () => {
+function openMobMenu() {
   body.classList.add('hidden')
   let overlay = createOverlay(nav)
   setTimeout(function() {
@@ -73,6 +69,13 @@ burger.addEventListener('click', () => {
       mobMenu.classList.remove('nav__link-social_mob-down')
     }, 1000);
   }, 300)
+}
+let burger = document.querySelector('.nav__burger'),
+    mobMenu = document.querySelector('.nav__link-social'),
+    nav = document.querySelector('.nav')
+
+burger.addEventListener('click', () => {
+  openMobMenu()
 })
 
 // close mob menu
@@ -114,6 +117,31 @@ mobBody.addEventListener('touchend', function(e) {
     startY = 0
     distanceY = 0
     moveY = true
+  }
+})
+
+// mobile swipe on menu
+let startMenuY = 0,
+    distanceMenuY = 0,
+    moveMenuY = false
+
+nav.addEventListener('touchstart', function(e) {
+  startMenuY = e.touches[0].clientY;
+})
+
+nav.addEventListener('touchmove', function(e) {
+  let coordY = e.touches[0].clientY
+  distanceMenuY = coordY- startMenuY
+  moveMenuY = true
+
+})
+
+nav.addEventListener('touchend', function(e) {
+  if(moveMenuY && distanceMenuY > 0) {
+    openMobMenu()
+    startMenuY = 0
+    distanceMenuY = 0
+    moveMenuY = true
   }
 })
 
