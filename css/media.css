@@ -3,6 +3,10 @@
     padding: 0 15px;
   }
 
+  .section {
+    margin-bottom: 80px;
+  }
+
   /* header */
   .nav {
     padding: 14px 0;
@@ -142,6 +146,23 @@
   .button-service {
     margin: unset;
   }
+
+  .additional__container {
+       -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+  }
+
+  .additional__left {
+    max-width: 310px;
+    background-image: none;
+  }
+
+  .additional__right {
+    position: relative;
+    top: -57.5px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -201,6 +222,10 @@
   /* global */
   .second-title {
     margin-bottom: 19px;
+  }
+
+  .container {
+    background-image: none !important;
   }
 
   /* hero */
@@ -272,6 +297,15 @@
 
   .line {
     display: none;
+  }
+
+  /* additional */
+  .additional__right {
+    display: none;
+  }
+
+  .additional-swiper {
+    display: block;
   }
 
 }

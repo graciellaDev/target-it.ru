@@ -204,3 +204,27 @@ buttonOpenService.addEventListener('click', () => {
 
 // close modal advice
 closeService.addEventListener('click', () => closeModalForm(formService, modalService))
+
+
+// projects slider Swiper
+const projectGallery = new Swiper('.additional-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  clickable: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  slidesPerGroup: 1,
+  speed: 700,
+  rewind: true,
+  keyboard: {
+    enabled: true,
+  },
+   // If we need pagination
+   pagination: {
+    el: '.additional__pagination',
+    type: 'bullets',
+    clickable: true,
+    bulletClass: 'additional__bullet swiper-pagination-bullet',
+    bulletActiveClass: 'additional__bullet_active swiper-pagination-bullet-active'
+  },
+});

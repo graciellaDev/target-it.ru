@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>target-it.ru - таргетированная реклама в соцсетях</title>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
-    <script defer src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/swiper/swiper-bundle.min.7.3.1.css">
+    <script defer src="js/swiper/swiper-bundle.min.7.3.1.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="header">
@@ -160,14 +162,14 @@
     </div>
   </section>
   <section class="section services">
-    <div class="container">
+    <div class="container services__container">
       <h2 class="second-title">
         Услуги
       </h2>
       <div class="line"></div>
       <div class="swipe-wrapper">
         <div class="swipe flex">
-          <div class="swipe__col swipe__col_1">
+          <div class="swipe__col swipe__col_services swipe__col_services-1">
             <h3 class="card-title">
               Анализ
             </h3>
@@ -175,7 +177,7 @@
               Анализ рыночной ниши, конкурентов, вашей компании. Анализ поможет построить стратегию продвижения.
             </p>
           </div>
-          <div class="swipe__col center swipe__col_2">
+          <div class="swipe__col swipe__col_services center swipe__col_services-2">
             <h3 class="card-title">
               Концепция продвижения
             </h3>
@@ -183,7 +185,7 @@
               Где, как, почему и какую рекламу вам стоит запускать.
             </p>
           </div>
-          <div class="swipe__col content-bottom-left swipe__col_3 flex">
+          <div class="swipe__col swipe__col_services content-bottom-left swipe__col_services-3 flex">
             <h3 class="card-title">
               Рекламные материалы
             </h3>
@@ -191,7 +193,7 @@
               Макеты, анимации, тексты и все, что необходимо для запуска.
             </p>
           </div>
-          <div class="swipe__col right swipe__col_4">
+          <div class="swipe__col swipe__col_services right swipe__col_services-4">
             <h3 class="card-title">
               Запуск и ежедневный контроль за рекламой
             </h3>
@@ -221,6 +223,48 @@
      <div class="additional__right">
        <img class="additional__img" src="img/additional-right.png" alt="Изображение схемы работы дополнительныых услуг">
      </div>
+     <div class="additional-swiper swiper">
+       <div class="swiper-wrapper">
+          <div class="swiper-slide additional__slide">
+            <img src="img/additional-slide1.png" alt="Слайд 1" class="additional-slide-img">
+          </div>
+          <div class="swiper-slide additional__slide">
+            <img src="img/additional-slide2.png" alt="Слайд 2" class="additional-slide-img">
+          </div>
+          <div class="swiper-slide additional__slide">
+            <img src="img/additional-slide3.png" alt="Слайд 3" class="additional-slide-img">
+          </div>
+       </div>
+       <div class="additional-nav">
+         <div class="swiper-pagination additional__pagination"></div>
+       </div>
+     </div>
+    </div>
+  </section>
+  <section class="section section-edge">
+    <div class="container edge__container">
+      <h2 class="second-title second-title_edge">
+        Почему мы?
+      </h2>
+      <div class="swipe-wrapper" bis_skin_checked="1">
+        <div class="swipe flex" bis_skin_checked="1">
+          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_1 flex" bis_skin_checked="1">
+            <p class="edge-description">
+              5+ лет опыта в продвижении
+            </p>
+          </div>
+          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_2 flex" bis_skin_checked="1">
+            <p class="edge-description">
+              20+ сфер, в которых уже работали
+            </p>
+          </div>
+          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_3 flex" bis_skin_checked="1">
+            <p class="edge-description">
+              индивидуальный план и предложение
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <div class="modal-order-phone flex">
