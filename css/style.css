@@ -809,6 +809,11 @@ body {
    overflow-x: auto;
 }
 
+.swipe-edge {
+  max-width: 1473px;
+  margin: auto;
+}
+
 .swipe:-webkit-scrollbar {
   display: none;
 }
@@ -964,4 +969,99 @@ body {
   font-size: 22px;
   line-height: 28px;
   text-align: center;
+}
+
+.second-title_works {
+  margin-bottom: 110px;
+}
+
+/* works */
+.works__container {
+  background-image: url("../img/Bg_works.png");
+}
+
+.second-title_works {
+  margin-bottom: 110px;
+}
+
+.works__slide {
+  text-align: center;
+}
+
+.works__img {
+  max-width: calc(100% - 23px);
+  margin-bottom: 32px;
+}
+
+.works__description {
+  margin: 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.works__button-next.swiper-button-next,
+.works__button-prev.swiper-button-prev {
+  top: calc(50% - 87px);
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  border: 1px solid #000;
+  -webkit-transition: all .3s linear;
+       -o-transition: all .3s linear;
+          transition: all .3s linear;
+}
+
+.works__button-prev.swiper-button-prev::after,
+.works__button-next.swiper-button-next::after {
+  content: '';
+  display: block;
+  width: 16.5px;
+  height: 16.5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.works__button-next.swiper-button-next::after {
+  background-image: url("../img/arrow-next.svg");
+}
+
+.works__button-prev.swiper-button-prev::after {
+  background-image: url("../img/arrow-prev.svg");
+}
+
+.works__button-next.swiper-button-next:hover {
+  border-width: 2px;
+}
+
+.works__button-prev.swiper-button-prev:hover {
+  border-width: 2px;
+}
+
+.works__button-next.swiper-button-next:focus {
+  border-width: 2px;
+}
+
+.works__button-prev.swiper-button-prev:focus {
+  border-width: 2px;
+}
+
+.works__button-next.swiper-button-next:active {
+  background-color: var(--link-yellow);
+}
+
+.works__button-prev.swiper-button-prev:active {
+  background-color: var(--link-yellow);
+}
+
+.works__bullet.swiper-pagination-bullet {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+  background-color: unset;
+  opacity: 1;
 }

@@ -206,8 +206,8 @@ buttonOpenService.addEventListener('click', () => {
 closeService.addEventListener('click', () => closeModalForm(formService, modalService))
 
 
-// projects slider Swiper
-const projectGallery = new Swiper('.additional-swiper', {
+// additional slider Swiper
+const additionalGallery = new Swiper('.additional-swiper', {
   direction: 'horizontal',
   loop: false,
   clickable: true,
@@ -228,3 +228,66 @@ const projectGallery = new Swiper('.additional-swiper', {
     bulletActiveClass: 'additional__bullet_active swiper-pagination-bullet-active'
   },
 });
+
+// works slider Swiper
+const worksGallery = new Swiper('.works-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  clickable: true,
+  slidesPerView: 4,
+  spaceBetween: 40,
+  slidesPerGroup: 4,
+  speed: 700,
+  rewind: true,
+  keyboard: {
+    enabled: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.works__button-next',
+    prevEl: '.works__button-prev',
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.works__pagination',
+    type: 'bullets',
+    clickable: true,
+    bulletClass: 'works__bullet swiper-pagination-bullet',
+    bulletActiveClass: 'works__bullet_active swiper-pagination-bullet-active'
+  },
+
+  breakpoints: {
+    // when window width is >= 640px
+    300: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      loopFillGroupWithBlank: true,
+    },
+
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2
+    },
+
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3
+    },
+
+    1500: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      slidesPerGroup: 4
+    }
+
+  }
+});
+
+let worksNavPrev = document.querySelector(".works__button-prev"),
+    worksNavNext = document.querySelector(".works__button-next")
+worksNavPrev.setAttribute('aria-label', 'Пролистать работы назад')
+worksNavNext.setAttribute('aria-label', 'Пролистать работы вперед')
