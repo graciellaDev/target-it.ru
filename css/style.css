@@ -1167,3 +1167,31 @@ body {
 .business-list__item:nth-child(3)::before {
   background-image: url("../img/dot-violet-small.svg");
 }
+
+/* advantage */
+.advantage__container {
+  background-image: url("../img/Bg_avantage.png");
+}
+
+.advantage__title {
+  max-width: 587px;
+  margin-bottom: 125px;
+}
+
+.swipe__col_services-advantage-1 {
+  background-image: url("../img/advantage-1.png");
+}
+
+.swipe__col_services-advantage-2 {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-image: url("../img/advantage-2.png");
+}
+
+.swipe__col_services-advantage-3 {
+  background-image: url("../img/advantage-3.png");
+}
+
+.swipe__col_services-advantage-4 {
+  background-image: url("../img/advantage-4.png");
+}
