@@ -224,8 +224,8 @@ const additionalGallery = new Swiper('.additional-swiper', {
     el: '.additional__pagination',
     type: 'bullets',
     clickable: true,
-    bulletClass: 'additional__bullet swiper-pagination-bullet',
-    bulletActiveClass: 'additional__bullet_active swiper-pagination-bullet-active'
+    bulletClass: 'black__bullet swiper-pagination-bullet',
+    bulletActiveClass: 'black__bullet_active swiper-pagination-bullet-active'
   },
 });
 
@@ -291,3 +291,61 @@ let worksNavPrev = document.querySelector(".works__button-prev"),
     worksNavNext = document.querySelector(".works__button-next")
 worksNavPrev.setAttribute('aria-label', 'Пролистать работы назад')
 worksNavNext.setAttribute('aria-label', 'Пролистать работы вперед')
+
+// clients slider Swiper
+const clientsGallery = new Swiper('.clients-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  clickable: true,
+  slidesPerView: 8,
+  spaceBetween: 52,
+  slidesPerGroup: 8,
+  speed: 700,
+  rewind: true,
+  keyboard: {
+    enabled: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.clients__button-next',
+    prevEl: '.clients__button-prev',
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.clients__pagination',
+    type: 'bullets',
+    clickable: true,
+    bulletClass: 'black__bullet swiper-pagination-bullet',
+    bulletActiveClass: 'black__bullet_active swiper-pagination-bullet-active'
+  },
+
+  breakpoints: {
+    // when window width is >= 640px
+    300: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      loopFillGroupWithBlank: true,
+    },
+
+    500: {
+      slidesPerView: 4,
+      spaceBetween: 34,
+      slidesPerGroup: 4
+    },
+
+    1300: {
+      slidesPerView: 6,
+      spaceBetween: 50,
+      slidesPerGroup: 6
+    },
+
+    1500: {
+      slidesPerView: 8,
+      spaceBetween: 40,
+      slidesPerGroup: 8
+    }
+
+  }
+});

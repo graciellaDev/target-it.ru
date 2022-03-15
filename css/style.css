@@ -89,9 +89,9 @@ body {
   min-height: 100%;
   margin: auto;
   padding: 0 100px;
-  background-position: left bottom;
+  background-position: left top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
 }
 
 .first-title {
@@ -903,7 +903,7 @@ body {
   margin-bottom: 40px;
 }
 
-.additional__bullet.swiper-pagination-bullet {
+.black__bullet.swiper-pagination-bullet {
   position: relative;
   width: 18px;
   height: 18px;
@@ -912,7 +912,7 @@ body {
   opacity: 1;
 }
 
-.additional__bullet_active::before {
+.black__bullet_active::before {
   content: '';
   position: absolute;
   top: 2px;
@@ -1194,4 +1194,22 @@ body {
 
 .swipe__col_services-advantage-4 {
   background-image: url("../img/advantage-4.png");
+}
+
+/* clients */
+.clients__container {
+  background-image: url("../img/Bg_clients.png");
+}
+
+.clients__title {
+  margin-bottom: 74px;
+}
+
+.clients-swiper .swiper-wrapper {
+  margin-bottom: 30px;
+}
+
+.clients__nav {
+  position: relative;
+  height: 30px;
 }
