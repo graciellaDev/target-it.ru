@@ -1,3 +1,37 @@
+@media screen and (max-width: 1500px) {
+  .business__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .business-content {
+    margin-right: 0;
+  }
+
+  .business__left {
+    margin-bottom: 30px;
+  }
+
+  .business__right {
+     -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-top: 0;
+  }
+
+  .business-content__icon {
+    max-width: 50px;
+  }
+
+  .business-content__text:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .business-table__icon {
+    top: -315px;
+  }
+}
+
 @media screen and (max-width: 1334px) {
   .container {
     padding: 0 15px;
@@ -8,6 +42,10 @@
   }
 
   /* header */
+  .header {
+    box-shadow: 1px 0.5px 1px #000;
+  }
+
   .nav {
     padding: 14px 0;
   }
@@ -178,6 +216,23 @@
   .currency::after {
     left: 2px;
   }
+
+  /* business */
+  .business-table__icon {
+    display: none;
+  }
+
+  .business-content {
+    max-width: unset;
+  }
+
+  .business-content__text:not(:last-child) {
+    width: 50%;
+  }
+
+  .business-content__icon {
+    margin-right: 15px;
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -216,6 +271,18 @@
   .data-input:not(:last-child) {
     margin-bottom: 15px;
   }
+
+  /* business */
+  .business-table__list {
+    padding: 15px;
+    background-image: none;
+  }
+
+  .business-table {
+    max-width: max-content;
+    margin: auto;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -308,6 +375,30 @@
     display: block;
   }
 
+  /* business */
+  .business-content {
+       -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+  }
+
+  .business-content__text:not(:last-child) {
+    width: auto;
+  }
+
+  .business-content__text {
+    font-size: 19px;
+  }
+
+  .business-content__icon {
+    max-width: 35px;
+  }
+
+  .business-list__item {
+    font-size: 19px;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -315,6 +406,12 @@
     width: 100%;
     min-height: 100%;
     border-radius: 0;
+  }
+
+  .business-list__item {
+    margin-bottom: 25px;
+    padding-left: 0;
+    padding-top: 45px;
   }
 }
 

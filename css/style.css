@@ -10,6 +10,7 @@
   --active-violet: #bc94ef;
   --red: #ff2929;
   --pink: #FCB4F0;
+  --border-black: #010101;
 }
 
 html {
@@ -1057,11 +1058,112 @@ body {
   background-color: var(--link-yellow);
 }
 
-.works__bullet.swiper-pagination-bullet {
+/* business */
+.business__container {
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+  background-image: url("../img/Bg_business.png");
+}
+
+.business__title {
+  max-width: 422px;
+}
+
+.business-content {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 457px;
+  margin: auto;
+}
+
+.business-content__text {
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.business-content__text:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.business-content__icon {
+  margin-right: 32px;
+}
+
+.business__left {
+   -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 15px;
+}
+
+.business__right {
   position: relative;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #000;
-  background-color: unset;
-  opacity: 1;
+  padding-top: 326px;
+}
+
+.business-table__icon {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  max-width: 425px;
+}
+
+.business-table__head {
+  padding: 7px 9px;
+  border: 1px solid var(--border-black);
+  text-align: right;
+}
+
+.business-head-icon:not(:last-child) {
+  margin-right: 24px;
+}
+
+.business-table__list {
+  padding: 32px;
+  padding-left: 373px;
+  border: 1px solid var(--border-black);
+  border-top: none;
+  background: url("../img/business_diagram.png") no-repeat 45px center / 272px;
+}
+
+.business-list__item {
+  position: relative;
+  padding-left: 45px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.business-list__item:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.business-list__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 29px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.business-list__item:first-child::before {
+  background-image: url("../img/dot-green-middle.svg");
+}
+
+.business-list__item:nth-child(2)::before {
+  background-image: url("../img/dot-line-middle.svg");
+}
+
+.business-list__item:nth-child(3)::before {
+  background-image: url("../img/dot-violet-small.svg");
 }
