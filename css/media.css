@@ -28,7 +28,29 @@
   }
 
   .business-table__icon {
-    top: -315px;
+    top: -260px;
+  }
+
+  .social-bottom {
+       -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+  }
+
+  .social-bottom__left {
+    -ms-flex-item-align: center;
+     -ms-grid-row-align: center;
+             align-self: center;
+    margin-right: 0;
+    margin-bottom: 80px;
+    padding: 65px;
+  }
+
+  .social-bottom__left::after {
+    bottom: -67px;
+    right: calc(50% - 40px);
+    transform: rotate(90deg);
   }
 }
 
@@ -397,6 +419,23 @@
 
   .business-list__item {
     font-size: 19px;
+  }
+
+  /* types social */
+  .social-line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .business-content:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .social-bottom__left {
+    max-width: 300px;
+    padding: 40px 30px;
+    font-size: 17px;
+    line-height: 20px;
   }
 
 }

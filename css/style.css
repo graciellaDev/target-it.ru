@@ -1109,9 +1109,9 @@ body {
 
 .business-table__icon {
   position: absolute;
-  top: 5px;
+  top: 70px;
   left: 30px;
-  max-width: 425px;
+  max-width: 355px;
 }
 
 .business-table__head {
@@ -1212,4 +1212,89 @@ body {
 .clients__nav {
   position: relative;
   height: 30px;
+}
+
+/* type social */
+.card-title_social {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.card-title_social {
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  margin-bottom: 31px;
+}
+
+.card-icon {
+  margin-right: 31px;
+}
+
+.card-list {
+  margin: 0;
+  padding-left: 30px;
+  list-style-position: outside;
+}
+
+.card-list__item {
+  padding-left: 5px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.card-list__item::marker {
+  content: '—';
+  line-height: 3px;
+}
+
+.social-bottom {
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+}
+
+.social-bottom__left {
+  position: relative;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  max-width: 514px;
+  margin-right: 80px;
+  padding-left: 46px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  background: url("../img/go_reclame.png") no-repeat left / 100%;
+}
+
+.social-bottom__left::after {
+  content: '';
+  position: absolute;
+  right: -70px;
+  display: block;
+  width: 80px;
+  height: 90px;
+  background: url("../img/go_reclame_arrow.png") no-repeat right / 100%;
+}
+
+.social-line {
+  margin-bottom: 32px;
+}
+
+.social-line__col {
+  max-width: max-content;
+  margin: 0;
+}
+
+.business-content_const-width {
+  min-width: 239px;
+  margin-right: 7%;
+}
+
+.social-line__p  {
+  -webkit-box-align: start;
+     -ms-flex-align: start;
+        align-items: flex-start;
 }
