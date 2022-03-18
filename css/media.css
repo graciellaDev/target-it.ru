@@ -56,6 +56,22 @@
   .card-title_social {
     font-size: 27px;
   }
+
+  /* prices */
+  .prices-wrapper__card {
+    max-width: 450px;
+    min-width: 450px;
+    min-height: 500px;
+  }
+
+  .text-сhevron {
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
+
+  .price-card {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 1334px) {
@@ -444,6 +460,43 @@
 
   .social-bottom__left::after {
     bottom: -58px
+  }
+
+  /* prices */
+  .prices-wrapper__card {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .text-сhevron {
+    margin-bottom: 22px;
+    font-size: 13px;
+  }
+
+  .price-card {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+
+  .price-text {
+    font-size: 14px;
+  }
+
+  .list-dots {
+    max-width: 263px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .price-btn {
+    padding: 15px;
+  }
+
+  .price-btn::after {
+    width: calc(100% + 10px);
   }
 
 }

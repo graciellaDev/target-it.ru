@@ -11,6 +11,8 @@
   --red: #ff2929;
   --pink: #FCB4F0;
   --border-black: #010101;
+  --buton-color: #050505;
+  --light-green: #8FF7BF;
 }
 
 html {
@@ -1302,4 +1304,124 @@ body {
   -webkit-box-align: start;
      -ms-flex-align: start;
         align-items: flex-start;
+}
+
+/* prices */
+.prices-block {
+    overflow: hidden;
+}
+
+.prices-wrapper {
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+     justify-content: space-between;
+     overflow-y: auto;
+}
+
+.prices-wrapper__card {
+     -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  -webkit-box-align: start;
+     -ms-flex-align: start;
+        align-items: flex-start;
+  max-width: 537px;
+  min-width: 537px;
+  min-height: 637px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  padding: 38px 30px 24px;
+}
+
+.prices-wrapper__card:not(:last-child) {
+  margin-right: 15px;
+}
+
+.prices-wrapper__card_test {
+  background-image: url("../img/Price-1.png");
+}
+
+.prices-wrapper__card_econom {
+  background-image: url("../img/Price-2.png");
+}
+
+.prices-wrapper__card_universal {
+  background-image: url("../img/Price-3.png");
+}
+
+.text-сhevron {
+  margin-bottom: 65px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.price-card {
+  margin: 0;
+  margin-bottom: 77px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.price-text {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.list-dots {
+   -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 326px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-left: 18px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.price-btn {
+  position: relative;
+  -ms-flex-item-align: end;
+   -ms-grid-row-align: end;
+           align-self: end;
+  padding: 15px 23px 15px 40px;
+  color: var(--buton-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  border: 1px solid #000;
+  border-radius: 22px;
+  background-color: transparent;
+}
+
+.price-btn::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  z-index: -1;
+  display: block;
+  height: 100%;
+  width: calc(100% + 16px);
+  border-radius: 22px;
+}
+
+.price-btn_green::after {
+  background-color: var(--light-green);
+}
+
+.price-btn_violet::after {
+  background-color: var(--light-violet);
+}
+
+.price-btn_yellow::after {
+  background-color: var(--yellow);
 }
