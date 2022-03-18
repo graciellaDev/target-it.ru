@@ -1215,6 +1215,11 @@ body {
 }
 
 /* type social */
+.swipe__col_social {
+  max-width: 386px;
+  min-width: 386px;
+}
+
 .card-title_social {
   font-size: 32px;
   line-height: 42px;

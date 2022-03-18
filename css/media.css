@@ -52,6 +52,10 @@
     right: calc(50% - 40px);
     transform: rotate(90deg);
   }
+
+  .card-title_social {
+    font-size: 27px;
+  }
 }
 
 @media screen and (max-width: 1334px) {
@@ -432,10 +436,14 @@
   }
 
   .social-bottom__left {
-    max-width: 300px;
-    padding: 40px 30px;
+    max-width: 273px;
+    padding: 50px 30px;
     font-size: 17px;
     line-height: 20px;
+  }
+
+  .social-bottom__left::after {
+    bottom: -58px
   }
 
 }
