@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -246,19 +246,19 @@
       <h2 class="second-title second-title_edge">
         Почему мы?
       </h2>
-      <div class="swipe-wrapper" bis_skin_checked="1">
-        <div class="swipe swipe-edge flex" bis_skin_checked="1">
-          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_1 flex" bis_skin_checked="1">
+      <div class="swipe-wrapper">
+        <div class="swipe swipe-edge flex">
+          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_1 flex">
             <p class="edge-description">
               5+ лет опыта в продвижении
             </p>
           </div>
-          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_2 flex" bis_skin_checked="1">
+          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_2 flex">
             <p class="edge-description">
               20+ сфер, в которых уже работали
             </p>
           </div>
-          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_3 flex" bis_skin_checked="1">
+          <div class="swipe__col swipe__col-edge content-bottom-left swipe__col-edge_3 flex">
             <p class="edge-description">
               индивидуальный план и предложение
             </p>
@@ -820,7 +820,7 @@
   </div>
   <div class="modal-advice flex">
     <form id="form-advice" class="order-form flex">
-      <span id="close-advice" class="order-form__close"></span>
+      <span id="close-advice" class="order-form__close" role="button" aria-label="закрыть модальное окно формы"></span>
       <div class="order-container">
         <h2 class="order-title">
           Заказать звонок
@@ -894,7 +894,7 @@
   </div>
   <div class="modal-service flex">
     <form id="form-service" class="order-form flex">
-      <span id="close-service" class="order-form__close"></span>
+      <span id="close-service" class="order-form__close" role="button" aria-label="закрыть модальное окно формы"></span>
       <div class="order-container">
         <h2 class="order-title">
           Заказать услуги
@@ -943,6 +943,82 @@
           <div class="form-data__col col-agreement flex">
             <label for="agreement-service" class="label-check flex">
               <input id="agreement-service" class="data-checkbox" type="checkbox" aria-label="Согласие на обработку персональных данных">
+              <span class="data-check">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 9L10 12L20 2" stroke="#8333E9" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19 10V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H14" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="data-border">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.25" y="0.25" width="17.5" height="17.5" rx="1.75" stroke="black" stroke-width="0.5"/>
+                </svg>
+              </span>
+            </label>
+            <p class="data-agreement">
+              Я предоставляю согласие на обработку персональных данных в соответствии с 
+              <a href="#" class="data-link-police" aria-label="ссылка на страницу политики конфиденциальности">
+                Политикой конфиденциальности.
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-prices flex">
+    <form id="form-prices" class="order-form flex">
+      <span id="close-prices" class="order-form__close" role="button" aria-label="закрыть модальное окно формы"></span>
+      <div class="order-container">
+        <h2 class="order-title order-title_tarif">
+          Заказать рекламу
+        </h2>
+        <p class="name-tarif"></p>
+        <input id="name-tarif" type="text" class="data-input" placeholder="text" value="тариф:" hidden>
+        <div class="form-data flex">
+          <div class="form-data__col">
+            <label for="name-prices" class="data-label">
+              Укажите ваше имя *
+            </label>
+            <div class="span-input">
+              <input id="name-prices" type="text" class="data-input" placeholder="text" required>
+            </div>
+            <label for="email-prices" class="data-label">
+              Укажите ваш адрес электронной почты *
+            </label>
+            <div class="span-input">
+              <input id="email-prices" type="text" class="data-input" required>
+            </div>
+          </div>
+          <div class="form-data__col">
+            <label for="phone-prices" class="data-label">
+              Укажите ваш номер телефона *
+            </label>
+            <div class="span-input">
+              <input id="phone-prices" type="text" class="data-input" required>
+            </div>
+            <label for="text-prices" class="data-label">
+              напишите ваше сообщение
+            </label>
+            <div class="span-input">
+              <textarea id="text-prices" name="data-text" class="data-textarea"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-data flex">
+          <div class="form-data__col">
+            <button class="data-submit color-back color-back_violet btn-reset flex">
+              Отправить
+              <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="14" r="14" fill="white"/>
+                <circle cx="15.0232" cy="15" r="13.75" stroke="black" stroke-width="0.5"/>
+                <path d="M11 14.5C10.7239 14.5 10.5 14.7239 10.5 15C10.5 15.2761 10.7239 15.5 11 15.5V14.5ZM19.3536 15.3536C19.5488 15.1583 19.5488 14.8417 19.3536 14.6464L16.1716 11.4645C15.9763 11.2692 15.6597 11.2692 15.4645 11.4645C15.2692 11.6597 15.2692 11.9763 15.4645 12.1716L18.2929 15L15.4645 17.8284C15.2692 18.0237 15.2692 18.3403 15.4645 18.5355C15.6597 18.7308 15.9763 18.7308 16.1716 18.5355L19.3536 15.3536ZM11 15.5H19V14.5H11V15.5Z" fill="black"/>
+              </svg>
+            </button>
+          </div>
+          <div class="form-data__col col-agreement flex">
+            <label for="agreement-prices" class="label-check flex">
+              <input id="agreement-prices" class="data-checkbox" type="checkbox" aria-label="Согласие на обработку персональных данных">
               <span class="data-check">
                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 9L10 12L20 2" stroke="#8333E9" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>

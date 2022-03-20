@@ -435,7 +435,8 @@ body {
 /* modal order */
 .modal-order-phone,
 .modal-advice,
-.modal-service {
+.modal-service,
+.modal-prices {
   position: fixed;
   top: 0;
   z-index: 2;
@@ -1400,6 +1401,7 @@ body {
   border: 1px solid #000;
   border-radius: 22px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .price-btn::after {
@@ -1424,4 +1426,14 @@ body {
 
 .price-btn_yellow::after {
   background-color: var(--yellow);
+}
+
+.order-title_tarif {
+  margin-bottom: 20px;
+}
+
+.name-tarif {
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 20px;;
 }

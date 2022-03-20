@@ -349,3 +349,35 @@ const clientsGallery = new Swiper('.clients-swiper', {
 
   }
 });
+
+// open modal service
+let buttonsPrice = document.querySelectorAll('.price-btn'),
+    modalPrice = document.querySelector('.modal-prices'),
+    formPrice = document.querySelector('#form-prices'),
+    closePriceModal = document.querySelector('#close-prices'),
+    InputTarif = document.querySelector('#name-tarif'),
+    InputTarifValue = document.querySelector('#name-tarif').value,
+    nameTarif = document.querySelector('.name-tarif')
+
+buttonsPrice.forEach(function(el) {
+  el.addEventListener('click', () => {
+    let tarif = el.parentNode.querySelector('.text-сhevron').textContent
+    nameTarif.textContent = 'Тариф ' + tarif
+    InputTarif.value += tarif
+    modalPrice.classList.toggle('visible')
+    formPrice.classList.add('move-down')
+    setTimeout(function() {
+      formPrice.style.top = '0'
+    }, 300)
+    body.classList.add('hidden')
+  })
+})
+
+// close modal advice
+closePriceModal.addEventListener('click', () => {
+  closeModalForm(formPrice, modalPrice)
+  setTimeout(function() {
+    InputTarif.value = InputTarifValue
+    nameTarif.textContent = ''
+  }, 300)
+})
