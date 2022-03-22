@@ -465,7 +465,7 @@ body {
   height: calc(100% - 114px);
   max-height: 816px;
   margin: auto;
-  padding: 57px;
+  padding: 40px;
   border-radius: 22px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: #FFFFFF;
@@ -555,6 +555,10 @@ body {
 
 .form-data__col:not(:last-child) {
   margin-right: 73px;
+}
+
+.span-input:not(:last-child) {
+  margin-bottom: 36px;
 }
 
 .data-label {
@@ -1436,4 +1440,177 @@ body {
   margin-bottom: 40px;
   font-size: 20px;
   line-height: 20px;;
+}
+
+/* stages */
+.stages__container {
+  background-image: url("../img/Bg_stage.png");
+}
+
+.stages-wrapper {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.stages-wrapper__step {
+  position: relative;
+  -ms-flex-preferred-size: calc(100%/3);
+      flex-basis: calc(100%/3);
+  max-width: 307px;
+  padding: 3px 14px 40px 18px;
+  border: 1px solid #000;
+  border-bottom-right-radius: 22px;
+}
+
+.stages-wrapper__step:not(:nth-child(3n)) {
+  margin-right: 139px;
+}
+
+.stages-wrapper__step:nth-last-child(n + 4) {
+  margin-bottom: 136px;
+}
+
+.stages-wrapper__step:nth-child(2) {
+  position: relative;
+}
+
+.stages-wrapper__step:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -147%;
+  display: block;
+  width: calc(300% + 278px);
+  height: 22px;
+  background: url("../img/line_with_dots.svg") no-repeat center / 100%;
+}
+
+.step-title {
+  position: relative;
+  min-height: 56px;
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.step-title::after {
+  content: '';
+  position: absolute;
+  right: -52px;
+  top: -52px;
+  display: block;
+  width: 105px;
+  height: 105px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.step-text {
+  margin: 0;
+  padding-left: 25px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.stages-wrapper__step:not(:nth-child(3n)) .step-text::after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  right: -139px;
+  display: block;
+  width: 139px;
+  height: .5px;
+  border-bottom: .5px solid #000;
+}
+
+.stages-wrapper__step::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 39px);
+  left: -25px;
+  display: block;
+  width: 50px;
+  height: 78px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.stages-wrapper__step:first-child::before {
+  background-image: url("../img/number_step_1.svg");
+}
+
+.stages-wrapper__step:nth-child(2)::before {
+  background-image: url("../img/number_step_2.svg");
+}
+
+.stages-wrapper__step:nth-child(3)::before {
+  background-image: url("../img/number_step_3.svg");
+}
+
+.stages-wrapper__step:nth-child(4)::before {
+  background-image: url("../img/number_step_4.svg");
+}
+
+.stages-wrapper__step:nth-child(5)::before {
+  background-image: url("../img/number_step_5.svg");
+}
+
+.stages-wrapper__step:nth-child(6)::before {
+  background-image: url("../img/number_step_6.svg");
+}
+
+.stages-wrapper__step:first-child .step-title::after{
+  background-image: url("../img/Stage_welcome.svg");
+}
+
+.stages-wrapper__step:nth-child(2) .step-title::after{
+  background-image: url("../img/Stage_analisys.svg");
+}
+
+.stages-wrapper__step:nth-child(3) .step-title::after{
+  background-image: url("../img/stage_sentence.svg");
+}
+
+.stages-wrapper__step:nth-child(4) .step-title::after{
+  background-image: url("../img/Stage_materials.svg");
+}
+
+.stages-wrapper__step:nth-child(5) .step-title::after{
+  background-image: url("../img/Stage_launch.svg");
+}
+
+.stages-wrapper__step:nth-child(6) .step-title::after{
+  background-image: url("../img/Stage_result.svg");
+}
+
+.stages-info {
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.stages-info__left {
+  padding-left: 100px;
+  background: url("../img/Stage_information.svg") no-repeat left top / 74px;
+}
+
+.stage-text-info {
+  max-width: 439px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
 }
