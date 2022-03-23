@@ -394,6 +394,19 @@
     background-position: center;
     background-size: 50%;
   }
+
+  /* feedback */
+  .feedback__container {
+     -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  }
+
+  .feedback__image {
+    min-height: 350px;
+    background-position-x: center;
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -442,6 +455,16 @@
   .business-table {
     max-width: max-content;
     margin: auto;
+  }
+
+  /* feedback */
+  .feedback__form {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .feedback__form .form-data__col:not(:last-child) {
+    margin-right: 0;
   }
 
 }
@@ -690,6 +713,7 @@
     font-size: 13px;
     line-height: 23px;
   }
+
 
 }
 

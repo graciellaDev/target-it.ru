@@ -1616,6 +1616,10 @@ body {
 }
 
 /* faq */
+.faq__container {
+  background-image: url("../img/Bg_faq.png");
+}
+
 .faq__questions {
   -webkit-box-align: stretch;
      -ms-flex-align: stretch;
@@ -1744,5 +1748,43 @@ body {
   background: url("../img/faq_image.png") no-repeat 20px 0 / 100%;
 }
 
+/* feedback */
+.feedback__container {
+  -webkit-box-align: stretch;
+     -ms-flex-align: stretch;
+        align-items: stretch;
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+  background-image: url("../img/Bg_feedback.png");
+  padding-top: 106px;
+  padding-bottom: 106px;
+}
+
+.feedback__title {
+  margin-bottom: 80px;
+}
+
+.feedback__image {
+  -ms-flex-preferred-size: calc(43% - 15px);
+               flex-basis: calc(43% - 15px);
+}
+.feedback__form {
+  -ms-flex-preferred-size: calc(57% - 15px);
+               flex-basis: calc(57% - 15px);
+}
+
+.feedback__image {
+  margin-right: 20px;
+  background: url("../img/feedback.png") no-repeat left center / contain;
+}
+
+.feedback__form {
+  padding: 70px 0;
+}
+
+.feedback__form .form-data__col:not(:last-child) {
+  margin-right: 15px;
+}
 
 
