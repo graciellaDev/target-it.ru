@@ -381,3 +381,10 @@ closePriceModal.addEventListener('click', () => {
     nameTarif.textContent = ''
   }, 300)
 })
+
+// JQuery accordion
+ $(".accordion").accordion({
+  heightStyle: "content",
+  active: 0,
+  collapsible: true
+});
