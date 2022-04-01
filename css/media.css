@@ -105,11 +105,23 @@
   .stages-info {
     max-width: 970px;
   }
+
+  /* contacts */
+  .contact-info__col {
+    padding: 50px 10px 30px 30px;
+  }
+
+  .contact-info__col::before {
+    left: -19px;
+    width: 50px;
+    height: 55px;
+  }
 }
 
 @media screen and (max-width: 1334px) {
   .container {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .section {
@@ -276,6 +288,48 @@
     position: relative;
     top: -57.5px;
   }
+
+  /* contacts */
+  .info {
+      -webkit-box-orient: vertical;
+   -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+   -webkit-box-align: center;
+      -ms-flex-align: center;
+         align-items: center;
+  }
+
+  .contacts__connection {
+   margin-right: 0;
+  }
+
+  .contacts__connection {
+   padding-top: 50px;
+   padding-bottom: 0;
+  }
+
+  .contacts__image {
+   -ms-flex-preferrer-size: initial;
+                flex-basis: initial;
+   width: 100%;
+   max-width: 500px;
+   height: 500px;
+   background-position: center;
+  }
+
+  .contact-info__col {
+    -ms-flex-preferred-size: calc(50% - 20px);
+                 flex-basis: calc(50% - 20px);
+  }
+
+  .contact-info__col:not(:last-child, :nth-last-child(-n + 2)) {
+   margin-bottom: 56px;
+  }
+
+  .contact-info__col:nth-child(2n + 1) {
+    margin-right: 10px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -386,7 +440,7 @@
   }
 
   .accordion {
-    padding: 20px 0;
+    padding: 20px 0 0;
   }
 
   .faq__image {
@@ -406,6 +460,11 @@
   .feedback__image {
     min-height: 350px;
     background-position-x: center;
+  }
+
+  /* contacts */
+  .contacts__image {
+    height: 400px;
   }
 }
 
@@ -714,6 +773,43 @@
     line-height: 23px;
   }
 
+
+  /* contacts */
+  .contact-info__col {
+    -ms-flex-preferred-size: 100%;
+                 flex-basis: 100%;
+    max-width: 400px;
+    margin-bottom: 26px;
+    padding-left: 20px;
+  }
+
+  .contact-info__col:not(:last-child, :nth-last-child(-n + 2)) {
+    margin-bottom: 26px;
+  }
+
+  .contact-info__col:nth-child(2n + 1) {
+    margin-right: 0;
+  }
+
+  .contact-info__col::before {
+    top: -10px;
+    left: calc(50% - 25px);
+  }
+
+  .contact-info,
+  .contact-social {
+    -webkit-box-pack: center;
+       -ms-flex-pack: center;
+     justify-content: center;
+  }
+
+  .contact-info {
+    margin-bottom: 30px;
+  }
+
+  .contacts__connection {
+    padding-left: 0;
+  }
 
 }
 

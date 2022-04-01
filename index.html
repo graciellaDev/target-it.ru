@@ -934,31 +934,31 @@
             </h2>
             <div class="form-data flex">
               <div class="form-data__col">
-                <label for="name" class="data-label">
+                <label for="order-name" class="data-label">
                   Укажите ваше имя *
                 </label>
                 <div class="span-input">
-                  <input id="name" type="text" class="data-input" placeholder="text" required>
+                  <input id="order-name" type="text" class="data-input" placeholder="text" required>
                 </div>
-                <label for="email" class="data-label">
+                <label for="order-email" class="data-label">
                   Укажите ваш адрес электронной почты *
                 </label>
                 <div class="span-input">
-                  <input id="email" type="text" class="data-input" required>
+                  <input id="order-email" type="text" class="data-input" required>
                 </div>
               </div>
               <div class="form-data__col">
-                <label for="phone" class="data-label">
+                <label for="order-phone" class="data-label">
                   Укажите ваш номер телефона *
                 </label>
                 <div class="span-input">
-                  <input id="phone" type="text" class="data-input" required>
+                  <input id="order-phone" type="text" class="data-input" required>
                 </div>
                 <label for="text" class="data-label">
                   напишите ваше сообщение
                 </label>
                 <div class="span-input">
-                  <textarea id="text" name="data-text" class="data-textarea"></textarea>
+                  <textarea id="order-text" name="data-text" class="data-textarea"></textarea>
                 </div>
               </div>
             </div>
@@ -974,8 +974,8 @@
                 </button>
               </div>
               <div class="form-data__col col-agreement flex">
-                <label for="agreement" class="label-check flex">
-                  <input id="agreement" class="data-checkbox" type="checkbox" aria-label="Согласие на обработку персональных данных">
+                <label for="order-agreement" class="label-check flex">
+                  <input id="order-agreement" class="data-checkbox" type="checkbox" aria-label="Согласие на обработку персональных данных">
                   <span class="data-check">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7 9L10 12L20 2" stroke="#8333E9" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1001,6 +1001,56 @@
       </div>
     </div>
   </section>
+  <section class="section contacts">
+    <div class="container contacts__container">
+      <h2 class="second-title">
+        Контакты
+      </h2>
+      <div class="info flex">
+        <div class="contacts__connection">
+          <div class="contact-info flex">
+            <a class="contact-info__col contact-phone" href="tel:+79342342312">
+              Тел: +7 934 234 23 12
+            </a>
+            <a class="contact-info__col contact-adress" href="#">
+              Москва, Голубинская 17/9
+            </a>
+            <a class="contact-info__col contact-email" href="mailto:svetlana.ohapkina@mail.ru">
+              Email:  svetlana.ohapkina@mail.ru
+            </a>
+            <a class="contact-info__col contact-site" href="https://target-it.ru">
+              https://target-it.ru
+            </a>
+          </div>
+          <div class="contact-social flex">
+            <!-- <a class="contact-social__col" href="https://www.instagram.com/target__it/" target="_blank">
+              <img src="img/contact-instagram.svg" alt="иконка социальной сети инстаграм">
+            </a>
+            <a class="contact-social__col" href="https://www.facebook.com/targetitnow/" target="_blank">
+              <img src="img/contact-facebook.svg" alt="иконка социальной сети фэйсбук">
+            </a>
+            <a class="contact-social__col" href="" target="_blank">
+              <img src="img/contact-odnoklassniki.svg" alt="иконка социальной сети одноклассники">
+            </a> -->
+            <a class="contact-social__col" href="https://vk.com/public195227283" target="_blank">
+              <img src="img/contact-vk.svg" alt="иконка социальной сети вконтакте">
+            </a>
+          </div>
+        </div>
+        <div class="contacts__image"></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer__container flex">
+      <div class="footer__col">
+        Target It © 2020
+      </div>
+      <div class="footer__col">
+        Все Права Защищены.
+      </div>
+    </div>
+  </footer>
   <div class="modal-order-phone flex">
     <form id="order-form" class="order-form flex">
       <span id="close-order" class="order-form__close"></span>
