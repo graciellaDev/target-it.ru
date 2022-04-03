@@ -99,6 +99,20 @@ function closeMobMenu() {
     }, 1000);
 }
 
+// close mob menu by click on link and add active link
+document.querySelectorAll('.nav-link').forEach(function(el) {
+  el.addEventListener('click', function() {
+    const screenWidth = window.screen.width
+    if(screenWidth <= '1334') {
+      closeMobMenu()
+    }
+    if(document.querySelector('.nav-link_active')) {
+      document.querySelector('.nav-link_active').classList.remove('nav-link_active')
+    }
+    this.classList.add('nav-link_active')
+  })
+})
+
 // mobile swipe-menu
 mobBody.addEventListener('touchstart', function(e) {
   startY = e.touches[0].clientY;

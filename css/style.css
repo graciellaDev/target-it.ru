@@ -330,7 +330,8 @@ body {
           transition: background-color .3s linear, width .3s linear;
 }
 
-.nav-link:hover::before {
+.nav-link:hover::before,
+.nav-link_active::before {
   width: calc(100% + 44px);
   background-color: var(--link-yellow);
 }
@@ -2016,7 +2017,7 @@ body {
   margin: 0;
   margin-bottom: 33px;
   font-weight: 900;
-  font-size: 64px;
+  font-size: 39px;
   line-height: 72px;
   color: var(--yellow);
 }

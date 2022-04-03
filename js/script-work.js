@@ -78,6 +78,20 @@ burger.addEventListener('click', () => {
   openMobMenu()
 })
 
+// add main href to menu`s link
+document.querySelectorAll('.nav-link').forEach(function(el) {
+  let nameDomain = location.hostname,
+      linkHref = el.getAttribute('href'),
+      domainHref= document.location.href,
+      indexBeforeLink = domainHref.lastIndexOf('/')
+      locationSite = domainHref.slice(0, indexBeforeLink)
+      console.log(domainHref.indexOf('uploads/'))
+  if(linkHref.indexOf('uploads/') == -1)
+  {
+    el.setAttribute('href', locationSite + linkHref)
+  }
+})
+
 // close mob menu
 let mobBody = document.querySelector('.nav__link-social'),
     startY = 0,
@@ -106,6 +120,10 @@ document.querySelectorAll('.nav-link').forEach(function(el) {
     if(screenWidth <= '1334') {
       closeMobMenu()
     }
+    if(document.querySelector('.nav-link_active')) {
+      document.querySelector('.nav-link_active').classList.remove('nav-link_active')
+    }
+    this.classList.add('nav-link_active')
   })
 })
 
