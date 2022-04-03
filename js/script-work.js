@@ -180,214 +180,7 @@ menu.addEventListener('click', (e) => {
 })
 
 // open modal advice
-let buttonOpenAdvice = document.querySelector('.button-more'),
-    modalAdvice = document.querySelector('.modal-advice'),
-    formAdvice = document.querySelector('#form-advice'),
-    closeAdvice = document.querySelector('#close-advice')
-
-buttonOpenAdvice.addEventListener('click', () => {
-  openModalForm(modalAdvice, formAdvice)
-})
-
-// close modal advice
-closeAdvice.addEventListener('click', () => closeModalForm(formAdvice, modalAdvice))
-
-// open modal service
-let buttonOpenService = document.querySelector('.button-service'),
-    modalService = document.querySelector('.modal-service'),
-    formService = document.querySelector('#form-service'),
-    closeService = document.querySelector('#close-service')
-
-buttonOpenService.addEventListener('click', () => {
-  openModalForm(modalService, formService)
-})
-
-// close modal advice
-closeService.addEventListener('click', () => closeModalForm(formService, modalService))
-
-
-// additional slider Swiper
-const additionalGallery = new Swiper('.additional-swiper', {
-  direction: 'horizontal',
-  loop: false,
-  clickable: true,
-  slidesPerView: 1,
-  spaceBetween: 0,
-  slidesPerGroup: 1,
-  speed: 700,
-  rewind: true,
-  keyboard: {
-    enabled: true,
-  },
-   // If we need pagination
-   pagination: {
-    el: '.additional__pagination',
-    type: 'bullets',
-    clickable: true,
-    bulletClass: 'black__bullet swiper-pagination-bullet',
-    bulletActiveClass: 'black__bullet_active swiper-pagination-bullet-active'
-  },
-});
-
-// works slider Swiper
-const worksGallery = new Swiper('.works-swiper', {
-  direction: 'horizontal',
-  loop: false,
-  clickable: true,
-  slidesPerView: 4,
-  spaceBetween: 40,
-  slidesPerGroup: 4,
-  speed: 700,
-  rewind: true,
-  keyboard: {
-    enabled: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.works__button-next',
-    prevEl: '.works__button-prev',
-  },
-
-  // If we need pagination
-  pagination: {
-    el: '.works__pagination',
-    type: 'bullets',
-    clickable: true,
-    bulletClass: 'works__bullet swiper-pagination-bullet',
-    bulletActiveClass: 'works__bullet_active swiper-pagination-bullet-active'
-  },
-
-  breakpoints: {
-    // when window width is >= 640px
-    300: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      loopFillGroupWithBlank: true,
-    },
-
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 34,
-      slidesPerGroup: 2
-    },
-
-    1300: {
-      slidesPerView: 3,
-      spaceBetween: 50,
-      slidesPerGroup: 3
-    },
-
-    1500: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-      slidesPerGroup: 4
-    }
-
-  }
-});
-
-let worksNavPrev = document.querySelector(".works__button-prev"),
-    worksNavNext = document.querySelector(".works__button-next")
-worksNavPrev.setAttribute('aria-label', 'Пролистать работы назад')
-worksNavNext.setAttribute('aria-label', 'Пролистать работы вперед')
-
-// clients slider Swiper
-const clientsGallery = new Swiper('.clients-swiper', {
-  direction: 'horizontal',
-  loop: false,
-  clickable: true,
-  slidesPerView: 8,
-  spaceBetween: 52,
-  slidesPerGroup: 8,
-  speed: 700,
-  rewind: true,
-  keyboard: {
-    enabled: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.clients__button-next',
-    prevEl: '.clients__button-prev',
-  },
-
-  // If we need pagination
-  pagination: {
-    el: '.clients__pagination',
-    type: 'bullets',
-    clickable: true,
-    bulletClass: 'black__bullet swiper-pagination-bullet',
-    bulletActiveClass: 'black__bullet_active swiper-pagination-bullet-active'
-  },
-
-  breakpoints: {
-    // when window width is >= 640px
-    300: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      loopFillGroupWithBlank: true,
-    },
-
-    500: {
-      slidesPerView: 4,
-      spaceBetween: 34,
-      slidesPerGroup: 4
-    },
-
-    1300: {
-      slidesPerView: 6,
-      spaceBetween: 50,
-      slidesPerGroup: 6
-    },
-
-    1500: {
-      slidesPerView: 8,
-      spaceBetween: 40,
-      slidesPerGroup: 8
-    }
-
-  }
-});
-
-// open modal service
-let buttonsPrice = document.querySelectorAll('.price-btn'),
-    modalPrice = document.querySelector('.modal-prices'),
-    formPrice = document.querySelector('#form-prices'),
-    closePriceModal = document.querySelector('#close-prices'),
-    InputTarif = document.querySelector('#name-tarif'),
-    InputTarifValue = document.querySelector('#name-tarif').value,
-    nameTarif = document.querySelector('.name-tarif')
-
-buttonsPrice.forEach(function(el) {
-  el.addEventListener('click', () => {
-    let tarif = el.parentNode.querySelector('.text-сhevron').textContent
-    nameTarif.textContent = 'Тариф ' + tarif
-    InputTarif.value += tarif
-    modalPrice.classList.toggle('visible')
-    formPrice.classList.add('move-down')
-    setTimeout(function() {
-      formPrice.style.top = '0'
-    }, 300)
-    body.classList.add('hidden')
-  })
-})
-
-// close modal advice
-closePriceModal.addEventListener('click', () => {
-  closeModalForm(formPrice, modalPrice)
-  setTimeout(function() {
-    InputTarif.value = InputTarifValue
-    nameTarif.textContent = ''
-  }, 300)
-})
-
-// JQuery accordion
- $(".accordion").accordion({
-  heightStyle: "content",
-  active: 0,
-  collapsible: true
-});
+let closeAdvice = document.querySelector('#close-advice')
 
 function sendAjaxForm(result_form, ajax_form, url) {
   $.ajax({
@@ -427,7 +220,7 @@ const workGallery = new Swiper('.work-swiper', {
 
   // If we need pagination
   pagination: {
-    el: '.work__pagination',
+    el: '.work-pagination',
     type: 'bullets',
     clickable: true,
     bulletClass: 'black__bullet swiper-pagination-bullet',
@@ -435,3 +228,30 @@ const workGallery = new Swiper('.work-swiper', {
   }
 
 });
+
+// click on tab in block work
+let tabs = document.querySelectorAll('.tab-button')
+
+tabs.forEach(function(el) {
+  el.addEventListener('click', function() {
+    let tabActive = document.querySelector('.tab-button_active'),
+        spanActive = document.querySelector('.tab-span-active'),
+        targetPath = this.getAttribute('data-path')
+        tabDescriptionActive = document.querySelector('.tab-description_active'),
+        newTabDescriptionActive = document.querySelector(`[data-target = '${targetPath}']`)
+
+
+    spanActive.style.opacity = '0'
+    setTimeout(() => {
+      tabActive.classList.remove('tab-button_active')
+      spanActive.remove()
+      this.classList.add('tab-button_active')
+      let newSpanActive = document.createElement('span')
+      newSpanActive.classList.add('tab-span-active')
+      this.appendChild(newSpanActive)
+      tabDescriptionActive.classList.remove('tab-description_active')
+      newTabDescriptionActive.classList.add('tab-description_active')
+    }, 300)
+
+  })
+})

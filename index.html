@@ -25,23 +25,18 @@
         <div class="nav__link-social flex">
           <ul class="nav-list list-reset flex">
             <li class="nav-list__item">
-              <a href="#" class="nav-link">
+              <a href="#services" class="nav-link">
                 услуги
               </a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-link">
+              <a href="#about_us" class="nav-link">
                 о компании
               </a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-link">
+              <a href="#prices" class="nav-link">
                 цены
-              </a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#" class="nav-link">
-                чат боты
               </a>
             </li>
             <li class="nav-list__item">
@@ -97,7 +92,7 @@
     </div>
   </header>
   <main class="main">
-    <section class="section hero">
+    <section id="about_us" class="section hero">
       <div class="container hero__container flex">
         <div class="hero-col-left">
           <picture>
@@ -164,7 +159,7 @@
         </div>
       </div>
     </section>
-    <section class="section services">
+    <section id="services" class="section services">
       <div class="container services__container">
         <h2 class="second-title">
           Услуги
@@ -284,7 +279,9 @@
               </p>
             </div>
             <div class="works__slide swiper-slide">
-              <img class="works__img" src="img/works/new_kindergarden.png" alt="Скриншот интернет-страницы сайта по привлечению воспитанников в новый детский сад">
+              <a href="promotion_of_kindergartens.html" class="works-link">
+                <img class="works__img" src="img/works/new_kindergarden.png" alt="Скриншот интернет-страницы сайта по привлечению воспитанников в новый детский сад">
+              </a>
               <p class="works__description">
                 Комплекс работ по привлечению воспитанников в новый детский сад
               </p>
@@ -636,7 +633,7 @@
         </div>
       </div>
     </section>
-    <section class="section prices">
+    <section id="prices" class="section prices">
       <div class="container prices__container">
         <div class="prices-block">
           <div class="prices-wrapper flex">
@@ -1350,6 +1347,13 @@
         </div>
       </div>
     </form>
+  </div>
+  <div class="modal-send-mail flex">
+    <div class="modal-send-mail__info">
+     <span id="close-send-mail-succes" class="order-form__close"></span>
+     <div class="order-title"></div>
+     <p class="card-description"></p>
+    </div>
   </div>
 </body>
 </html>
