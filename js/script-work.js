@@ -99,6 +99,16 @@ function closeMobMenu() {
     }, 1000);
 }
 
+// close mob menu by click on link
+document.querySelectorAll('.nav-link').forEach(function(el) {
+  el.addEventListener('click', () => {
+    const screenWidth = window.screen.width
+    if(screenWidth <= '1334') {
+      closeMobMenu()
+    }
+  })
+})
+
 // mobile swipe-menu
 mobBody.addEventListener('touchstart', function(e) {
   startY = e.touches[0].clientY;
